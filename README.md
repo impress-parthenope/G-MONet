@@ -15,36 +15,30 @@ if you find it useful and use it for you research, please cite as the following
   doi={10.1109/TGRS.2023.3314857}}
 ```
 
+
 GGCS-MONet inglobe the benefit of a multi-objective architecture of [MONet](https://ieeexplore.ieee.org/document/9261137) and a specific training strategy based on the [GGCS simulator](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8944059)
 
-The 17 layers CNN architecture. 
-<p align="center">
- <img src="![immagine](https://github.com/impress-parthenope/GGCS-MONet/assets/85936968/9de093ab-e24a-442c-8c77-22e0379da9b5)" width="700">
-</p>
-  
-The cost function is composed of three terms taking care of spatial and statistical properties of the interferometric phase: a cosine based metric for evaluating similarity between output and reference, a gradient based metric for edges preservation and the Kullback-Leibler divergence between estimated noise distribution and the theoretical one.
+The 17 layers CNN architecture of MONet is trained in a supervised fashion with a training dataset specifically designed for including real properties or real SAR images.
+Starting from a multi-temporal stack of real SAR images, the GGCS simulator is used for extracting statistical information from the data. Such features are used for simualting realistic speckle noise distribution intirinsic in the real data. This allow to overcome the limitation of fully developed hypothesis highlighted in [previous analysis](https://github.com/impress-parthenope/Analysis-on-the-Building-of-Training-Datatset-for-Deep-Learning-SAR-Despeckling)
 
-<p align="center">
-<img src="https://user-images.githubusercontent.com/36993034/197556133-3ce13133-b3ec-4913-a8a9-0ead333e6c7e.png" width=400> 
-</p>
+Architecture of MONet
+  ![monet](https://github.com/impress-parthenope/GGCS-MONet/assets/85936968/fc4c026f-27f0-4a9f-8a4d-112d1f7fd064)
 
-<p align="center">
- <img src="https://user-images.githubusercontent.com/36993034/197556216-307418ae-1cd4-4734-b837-61ed111f93d3.png" width = 500>
-</p>
+Procedure for constructing realistic training dataset with GGCS simulator and real SAR images
+![immagine](https://github.com/impress-parthenope/GGCS-MONet/assets/85936968/87f51ed6-44f0-4923-b38f-3e7506430703)
 
-An example on simulated data is shown below
-Noisy Image| Noise-Free Reference | InSAR-MONet 
-:-----------------------------------------|:---------------------------------------:|:--------------------------------------:
-<img src="https://user-images.githubusercontent.com/36993034/197556940-3af2a154-d82d-4df3-b18d-bd37b0258bd7.png" width="150"> |<img src="https://user-images.githubusercontent.com/36993034/197557009-a407aea1-8f7c-41a5-834c-87066edace1e.png" width="150"> |<img src="https://user-images.githubusercontent.com/36993034/197557074-e7566a82-f0bf-4853-9776-8ef22aa77c82.png" width="150">
+
 
 # Team members
  Sergio Vitale    (contact person, sergio.vitale@uniparthenope.it);
+ Dong-Xiao Yue (yue_dong_xiao@163.com)
  Giampaolo Ferraioli (giampaolo.ferraioli@uniparthenope.it);
- Gilda  Schirinzi (gilda.schirinzi@uniparthenope.it)
- Vito Pascazio (vito.pascazio@uniparthenope.it)
+ Alejandro Frery (alejandro.frery@vuw.ac.nz);
+ Feng Xu (fengxu@fudan.edu.cn);
+ Vito Pascazio (vito.pascazio@uniparthenope.it);
  
 # License
-Copyright (c) 2022 Dipartimento di Ingegneria and Dipartimento di Scienze e Tecnologie of Università degli Studi di Napoli "Parthenope".
+Copyright (c) 2023 Dipartimento di Ingegneria and Dipartimento di Scienze e Tecnologie of Università degli Studi di Napoli "Parthenope".
 
 All rights reserved. This work should only be used for nonprofit purposes.
 
@@ -53,19 +47,16 @@ terms of the license, as specified in the document LICENSE.txt
 (included in this directory)
 
 # Usage 
-* **data** folder contains three samples images with simulated interferometric SAR phases (corresponding to the examples of the paper);
-Three differente cases can be tested:
-     * small baseline and high coherence (B1, Gamma 4)
-     * medium baseline and medium coherence (B2, Gamma 3)
-     * large baseline and low coherence (B4, Gamma 1)
-
 * *model* contains trained weigths
 * *model.py* contains the model implementation
 * *testing.py* is the main script for testing
 
 # Prerequisites
 This code is written on Ubuntu system for Python3.7 and uses Pytorch library.
-
+- python=3.7
+- pythorc=3.9.1
+- cuda = 10.2
+  
 For a correct usage of the code, please install the python environement saved in **./env/monet_pytorch.yml** with the following step:
 
 **Installing Anaconda** (if not already installed)
