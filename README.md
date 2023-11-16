@@ -23,6 +23,7 @@ Starting from a multi-temporal stack of real SAR images, the GGCS simulator is u
 
 Architecture of MONet
   ![monet](https://github.com/impress-parthenope/GGCS-MONet/assets/85936968/fc4c026f-27f0-4a9f-8a4d-112d1f7fd064)
+  
 
 Procedure for constructing realistic training dataset with GGCS simulator and real SAR images
 ![immagine](https://github.com/impress-parthenope/GGCS-MONet/assets/85936968/87f51ed6-44f0-4923-b38f-3e7506430703)
