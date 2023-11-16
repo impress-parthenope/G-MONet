@@ -1,4 +1,4 @@
-# GGCS-MONet
+# G-MONet
 
 This repository contains the testing code of **G-MONet**, a CNN based solution for SAR Amplitude Despeckling.
 
