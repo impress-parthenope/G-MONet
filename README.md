@@ -1,4 +1,6 @@
-# G-MONet
+# G-MONet:
+
+# SAR Despeckling Using Multiobjective Neural Network Trained With Generic Statistical Samples
 
 This repository contains the testing code of **G-MONet**, a CNN based solution for SAR Amplitude Despeckling.
 
