@@ -21,13 +21,18 @@ GGCS-MONet inglobe the benefit of a multi-objective architecture of [MONet](http
 The 17 layers CNN architecture of MONet is trained in a supervised fashion with a training dataset specifically designed for including real properties or real SAR images.
 Starting from a multi-temporal stack of real SAR images, the GGCS simulator is used for extracting statistical information from the data. Such features are used for simualting realistic speckle noise distribution intirinsic in the real data. This allow to overcome the limitation of fully developed hypothesis highlighted in [previous analysis](https://github.com/impress-parthenope/Analysis-on-the-Building-of-Training-Datatset-for-Deep-Learning-SAR-Despeckling)
 
-Architecture of MONet
-  ![monet](https://github.com/impress-parthenope/GGCS-MONet/assets/85936968/fc4c026f-27f0-4a9f-8a4d-112d1f7fd064)
+_Architecture of **MONet**_
+
+<p align="center">
+  <img src="https://github.com/impress-parthenope/GGCS-MONet/assets/85936968/fc4c026f-27f0-4a9f-8a4d-112d1f7fd064.png"
+  width=500>
+<p>
   
+_Procedure for **constructing realistic training dataset** with GGCS simulator and real SAR images_
 
-Procedure for constructing realistic training dataset with GGCS simulator and real SAR images
-![immagine](https://github.com/impress-parthenope/GGCS-MONet/assets/85936968/87f51ed6-44f0-4923-b38f-3e7506430703)
-
+<p align="center">
+<img src="https://github.com/impress-parthenope/GGCS-MONet/assets/85936968/87f51ed6-44f0-4923-b38f-3e7506430703.png" height=400>
+<p>
 
 
 # Team members
