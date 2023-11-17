@@ -58,6 +58,7 @@ terms of the license, as specified in the document LICENSE.txt
 * *model* contains trained weigths
 * *model.py* contains the model implementation
 * *testing.py* is the main script for testing
+In the folder data, an ICEYE SLC sample if GDANSK is provided. 
 
 # Prerequisites
 This code is written on Ubuntu system for Python3.7 and uses Pytorch library.
@@ -65,7 +66,7 @@ This code is written on Ubuntu system for Python3.7 and uses Pytorch library.
 - pythorc=3.9.1
 - cuda = 10.2
   
-For a correct usage of the code, please install the python environement saved in **./env/monet_pytorch.yml** with the following step:
+For a correct usage of the code, please install the python environement saved in **./env/gmonet.yml** with the following step:
 
 **Installing Anaconda** (if not already installed)
 
